@@ -1,0 +1,11 @@
+<template>
+    <ul class="nav navbar-nav pull-right">
+        <li click.delegate="auth.login()" if.bind="!authenticated">
+          <a>Log In</a>
+        </li>
+        <li click.delegate="auth.logout()" if.bind="authenticated">
+          <a>Log Out</a>
+        </li>
+      </ul>
+  <router-view></router-view>
+</template>
